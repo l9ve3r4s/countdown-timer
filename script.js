@@ -32,6 +32,60 @@ function colorTime(time) {
     : ((secondsEl.style.color = "white"), time);
 }
 
+function colorTime(time) {
+  if (time < 10 )
+  {
+    switch(time)
+    {
+      case 10 :
+        return ((secondsEl.style.color = "red"), `0${time}`);
+        break;
+
+      case 9 :
+        return ((secondsEl.style.color = "orange"), `0${time}`);
+        break;
+
+      case 8 :
+        return ((secondsEl.style.color = "yellow"), `0${time}`);
+        break;
+
+      case 7 :
+          return ((secondsEl.style.color = "green"), `0${time}`);
+          break;
+          
+      case 6 :
+        return ((secondsEl.style.color = "blue"), `0${time}`);
+        break;
+
+      case 5 :
+        return ((secondsEl.style.color = "violet"), `0${time}`);
+        break;
+
+      case 4 :
+        return ((secondsEl.style.color = "violet"), `0${time}`);
+        break;
+
+      case 3 :
+        return ((secondsEl.style.color = "black"), `0${time}`);
+        break;
+      
+      case 2 :
+        return ((secondsEl.style.color = "black"), `0${time}`);
+        break;
+      
+      case 1 :
+        return ((secondsEl.style.color = "gray"), `0${time}`);
+        break;
+        
+    }
+
+  }
+  else
+  {
+    return ((secondsEl.style.color = "white"), time);
+  }
+}
+
 countdown();
 
 setInterval(countdown, 1000);
